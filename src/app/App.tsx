@@ -1,31 +1,22 @@
 import './App.css';
 
-import { useState } from 'react';
-
-import reactLogo from './../assets/react.svg';
-import viteLogo from '/vite.svg';
+import AddBlock from './components/add/AddBlock';
+import AfishaList from './components/afishaList/AfishaList';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import RunningLine from './components/runningLine/RunningLine';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a rel="noopener" href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a rel="noopener" href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header mainContainerClass="container" />
+      <RunningLine mainContainerClass="container" />
+      <div className="main_content_block">
+        <AddBlock mainContainerClass="container" />
+        <AfishaList mainContainerClass="container" />
+        <AddBlock mainContainerClass="container" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <Footer mainContainerClass="container" />
     </>
   );
 }
