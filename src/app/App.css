@@ -19,6 +19,10 @@
   flex: 1;
 }
 
+.preloader {
+  margin: auto;
+}
+
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
